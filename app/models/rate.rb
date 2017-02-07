@@ -7,7 +7,6 @@
 
 # Description of purpose of file: validates whether the given rats for ordinary and speed post are integer 
 
-#Revision Date : 20-03-2013
 #*********************************************************************************
 
 class Rate < ActiveRecord::Base
