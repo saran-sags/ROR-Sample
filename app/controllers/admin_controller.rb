@@ -19,16 +19,6 @@ class AdminController < ApplicationController
   before_filter :authenticate, :except => [:forget_password,:password,:view_status,:card_status]
 layout 'post_office'
 
-#to get admoin details from user table and to display for edit profile 
-  def admin_profile 
-      @user = User.find_by_id(session[:user_id])
-  end #  def profile 
-  
-#to get admoin details from user table and to display for edit profile 
-  def profile 
-      @user = User.find_by_id(session[:user_id])
-  end #  def profile 
-
 #to update admin profile
   def updated_profile
     
