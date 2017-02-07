@@ -7,7 +7,6 @@
 
 # Description of purpose of file: to check for authentication and for session login and logout
 
-#Revision Date : 25-03-2013
 #*********************************************************************************
 
 class ApplicationController < ActionController::Base
