@@ -5,7 +5,6 @@
 
 # Description of purpose of file: to fix routes for login and logout
 
-#Revision Date : 21-03-2013
 #*********************************************************************************
 PostOffice::Application.routes.draw do
   root :to => "sessions#create"
