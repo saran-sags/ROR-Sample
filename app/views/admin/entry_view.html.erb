@@ -1,0 +1,66 @@
+<!--*************************************************************************** 
+ File Name : entry_view.html.erb
+
+ Project Name : Post Office
+
+ Description of purpose of file: To display entered card details for billng purpose
+
+ Revision Date : 21-03-2013
+*******************************************************************************-->
+
+<html>
+  
+  <div align = "center"> 
+      <h1>Received card</h1>
+      <table width = "300" bgcolor = "#FAF1D2">
+
+        <% @card = CardDetail.find_by_card_id(params[:id]) %> 
+         <tr><th>Card ID</th>
+	         <td><%= @card.card_id %></td></tr>
+         <tr><td>-----------------------------------</td>
+             <td>----------------------</td></tr>
+         <tr><th>Sender Details</th><br>
+	         <td><%= @card.sender_name %><br>
+                     <%= @card.sender_address %><br>
+                     <%= @card.sender_city %><br>
+                     <%= @card.sender_pincode %><br>
+                     <%= @card.sender_state %><br>
+                     <%= @card.sender_phone_no %><br>                    
+                 </td></tr>
+         <tr><td>-----------------------------------</td>
+             <td>----------------------</td></tr>
+         <tr><th>Receiver Details</th>
+	         <td><%= @card.receiver_name %><br>
+                     <%= @card.receiver_address %><br>
+                     <%= @card.receiver_city %><br>
+                     <%= @card.receiver_pincode %><br>
+                     <%= @card.receiver_state %><br>
+                     <%= @card.receiver_phone_no %><br>                   
+                 </td></tr>
+          <tr><td>-----------------------------------</td>
+             <td>----------------------</td></tr>
+
+          <tr><th>Type</th>
+              <td><%= @card.card_type %> post</td></tr>
+           <tr><td>-----------------------------------</td>
+             <td>----------------------</td></tr>
+
+          <%if @card.weight != 0 %>
+             <tr><th>Weight</th>
+ 	         <td><%= @card.weight %> grams</td></tr>
+             <tr><td>-----------------------------------</td>
+             <td>----------------------</td></tr>
+          <%end%>
+        
+          
+           <tr><th>Amount</th>
+              <td><%= @card.amount %></td></tr>
+
+           
+      </table>
+        
+              <br><%= link_to "Back" ,:controller => "admin" ,:action => "new_entry" %><br/>  
+        
+  </div>
+
+</html>

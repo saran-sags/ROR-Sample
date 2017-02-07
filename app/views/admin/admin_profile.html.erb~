@@ -1,0 +1,52 @@
+<!-- **************************************************************************
+ File Name : admin_profile.html.erb
+
+ Project Name : Post Office
+
+ Description of purpose of file: To display admin profile and a link to edit profile 
+
+ Revision Date : 21-03-2013
+*******************************************************************************-->
+
+<html>
+ 
+  <div align = "center">
+      <h1>Profile</h1>
+  </div>
+  <div align = "center" > 
+      <%= flash[:notice] %>
+  </div> 
+
+  <form name = "input" action = "profile">
+    <div align = "center">
+      <table border = "1"  bgcolor = "#FAF1D2">
+         <col width = "300">
+         <col width = "300">
+          <tr><td>Name</td>
+             <td><%= @user.name %></td></tr>
+
+           <tr><td>Email</td>
+             <td><%= @user.email %></td></tr>
+
+          <tr><td>Address</td>
+             <td><%= @user.address %></td></tr>
+
+          <tr><td>City</td>
+             <td><%= @user.city %></td></tr>
+
+          <tr><td>Pincode</td>
+             <td><%= @user.pincode %></td></tr>
+         
+          <tr><td>State</td>
+             <td><%= @user.state %></td></tr>
+
+          <tr><td>Contact No</td>
+             <td><%= @user.contact_no %></td></tr>
+          
+      </table>
+      <br><%= submit_tag "Edit"%>
+      <%= link_to "Back" ,:controller => "admin" ,:action => "home" %><br/>  
+    </div>
+  </form>
+
+</html>

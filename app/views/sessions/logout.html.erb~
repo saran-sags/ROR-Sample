@@ -1,0 +1,4 @@
+<html>
+
+  <%= redirect_to :action=> "destroy"%>
+</html>

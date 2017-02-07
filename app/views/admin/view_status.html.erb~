@@ -1,0 +1,33 @@
+<!-- **************************************************************************
+ File Name : view_status.html.erb
+
+ Project Name : Post Office
+
+ Description of purpose of file: To display fixed rates and to edit rates 
+
+ Revision Date : 25-03-2013
+*******************************************************************************-->
+<html>
+ <div align = "center">
+   <%= flash[:notice]%>
+    <h1>Card Status</h1>
+   <form name = "input" action = "card_status">
+      <table border = "0">
+       <col width = "300">
+       <col width = "300">
+
+             <tr><td><label for = "card_id">Card Id</label></td>
+	         <td><input type = "password" name = "card_id"></td></tr>
+             
+             <tr><td><label for = "sender_phone_no">Contact No</label></td>
+	         <td><input type = "password" name = "sender_phone_no"></td></tr>
+      </table>
+
+       <br><%= submit_tag "View Status" %>
+       <%= link_to "Back" ,:controller => "sessions" ,:action => "new" %><br/> 
+
+    </div>
+
+
+</html>
+

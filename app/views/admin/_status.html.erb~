@@ -1,0 +1,14 @@
+<!-- **************************************************************************
+ File Name : received_cards.html.erb
+
+ Project Name : Post Office
+
+ Description of purpose of file: To search cards with their types (ordinary/speed post)
+                                 and by status(Received/Inprogress/Delivered/Non-Delivered)
+ Revision Date : 21-03-2013
+*******************************************************************************-->
+
+<html>
+ 
+  hi
+</html>

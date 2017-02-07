@@ -1,0 +1,71 @@
+<!-- **************************************************************************
+ File Name : search_result.html.erb
+
+ Project Name : Post Office
+
+ Description of purpose of file: to display card details with corresponding search with their 
+                                 types (ordinary/speed post)
+                                 and by status(Received/Inprogress/Delivered/Non-Delivered)
+ Revision Date : 22-03-2013
+*******************************************************************************-->
+
+<html>
+ 
+   <%= render :template => "admin/cards" %>
+  
+  <% if (!@cards.blank?) %>
+  
+   <div align = "center">  
+   <table border = "1"  bgcolor = "#FAF1D2">
+   
+      <tr>
+		   <th>Card ID</th>
+		   <th>Sender Details</th>
+		   <th>Receiver Details</th>
+		   <th>Type</th>
+		   <th>Weight</th>
+		   <th>Status</th>
+		   <th>Amount</th>
+           
+      </tr>
+ 
+      <tr>
+           <% @cards.each do |card| %>
+                 <% @card = card %>
+	         <td><%= @card.card_id %></td>
+        
+         
+	         <td><%= @card.sender_name %><br>
+                     <%= @card.sender_address %><br>
+                     <%= @card.sender_city %><br>
+                     -<%= @card.sender_pincode %><br>
+                     <%= @card.sender_state %><br>
+                     ph_no : <%= @card.sender_phone_no %><br></td>
+         
+	         <td><%= @card.receiver_name %><br>
+                     <%= @card.receiver_address %><br>
+                     <%= @card.receiver_city %><br>
+                     -<%= @card.receiver_pincode %><br>
+                     <%= @card.receiver_state %><br>
+                     ph_no : <%= @card.receiver_phone_no %><br></td>
+           
+                 <td><%= @card.card_type %> post</td>
+         
+                 <%if @card.weight != 0 %>
+ 	           <td><%= @card.weight %></td>
+                 <%else%>
+                   <td align = "center">Nil</td>
+                 <%end%>
+                
+                 <td><%= @card.status %></td>
+                 <td align = "center"><%= @card.amount %></td>    
+      </tr>
+      <% end %>
+   </table>
+  </div>
+ <%else%>
+   <div align = "center"> 
+       <p>No Cards Available</p>
+   </div>
+ <% end %>
+</html>

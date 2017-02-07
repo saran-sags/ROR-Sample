@@ -1,0 +1,48 @@
+<!--*************************************************************************** 
+ File Name : home.html.erb
+
+ Project Name : Post Office
+
+ Description of purpose of file: admin home with account access for profile view and edit
+                                 and password change ,New entry,view received cards ,update 
+                                 status , and to fix rates 
+
+ Revision Date : 21-03-2013
+*******************************************************************************-->
+
+<html>
+    <div align = "right" style = "color:#D51421;font-size:20px;">
+	       <p> Welcome 
+	       <%= session[:name] %>
+    </div>
+    <div align = "center"> 
+              <%= flash[:notice]%>
+    </div>
+    <table border = "0" cellpadding = "50">
+        <td width = "200">
+           <th width = "400" > 
+            <div align = "left">  
+              <br><%= link_to "Home"%></br>
+                          <menu type = "list">
+                             <li>
+				    <p>My Account</p>
+				    <menu label = "My Account">
+				         <br><%= link_to "Profile" ,:action => "admin_profile" %>
+				         <br><%= link_to "Change Password" ,:controller => "admin" ,:action => "change_password" %>
+				    </menu>
+                             </li>
+                           </menu>
+
+              
+              <br><%= link_to "New Entry" ,:controller => "admin" ,:action => "new_entry" %></br>
+              <br><%= link_to "Received Cards" ,:controller => "admin" ,:action => "cards" %></br>
+              <br><%= link_to "Edit Received Cards" ,:controller => "admin" ,:action => "edit_card" %></br>
+              <br><%= link_to "Update Status" ,:controller => "admin" ,:action => "update_status" %></br>
+              <br><%= link_to "Postal Fix Rates" ,:controller => "admin" ,:action => "fix_rates" %></br>
+              <br><%= link_to "Logout" ,:controller => "sessions" ,:action => "logout" %></br>
+             </div>
+          </th>
+        </td>
+
+   </table>
+</html>

@@ -1,0 +1,35 @@
+<!-- **************************************************************************
+ File Name : fix_rates.html.erb
+
+ Project Name : Post Office
+
+ Description of purpose of file: To display fixed rates and a link to edit rates 
+
+ Revision Date : 25-03-2013
+*******************************************************************************-->
+
+<html>
+   
+  <% @rate = Rate.find_by_id(1) %>
+
+   <div align = "center">
+      <h1>Fixed Rates</h1>
+       <%= flash[:notice]%>
+
+      <table border = "1"  bgcolor = "#FAF1D2">
+        <%= form_tag({:action => "edit_rates"})%>
+        <tr>
+          <th width = "300">Type</th>
+          <th width = "100">Rate</th>
+            
+        </tr>
+        <tr> <td align = "center">Ordinary post </td>
+             <td align = "center"><%= @rate.ordinary_post %></td> </tr>
+         <tr><td align = "center">Speed post</td>
+             <td align = "center"><%= @rate.speed_post %></td></tr>  
+    
+      </table>
+       <br><%= submit_tag "Edit"%>
+        <%= link_to "Back" ,:controller => "admin" ,:action => "home" %><br/>
+   </div>    
+</html>

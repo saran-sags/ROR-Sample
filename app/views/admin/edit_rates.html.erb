@@ -1,0 +1,32 @@
+<!-- **************************************************************************
+ File Name : edit_rates.html.erb
+
+ Project Name : Post Office
+
+ Description of purpose of file: To display fixed rates and to edit rates 
+
+ Revision Date : 25-03-2013
+*******************************************************************************-->
+<html>
+
+ <%= form_for :rate, :url => {:controller => "admin" ,:action => "updated_rates" } do |f| %>
+    <div align = "center">
+       <h1>Edit Rates</h1> 
+       <table border = "0" bgcolor = "#FAF1D2">
+       <col width = "300">
+       <col width = "300">
+            
+             <tr><td><label for = "ordinary_post">Ordinary Post</label></td>
+	         <td><%= f.text_field :ordinary_post %></td></tr>
+             
+             <tr><td><label for = "speed_post">Speed</label></td>
+	         <td><%= f.text_field :speed_post %></td></tr>
+       </table>
+
+       <br> <%= f.submit "Update Changes"%>
+       <%= link_to "Back" ,:controller => "admin" ,:action => "fix_rates" %><br/> 
+
+    </div>
+ <%end%>
+
+</html>
