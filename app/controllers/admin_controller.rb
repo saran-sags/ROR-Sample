@@ -12,7 +12,6 @@
 #				  to add new cards with sender and receiver details and with corresponding type
 #				  to display admin password by validating admin email and contact no
 
-#Revision Date : 20-03-2013
 #*********************************************************************************
 
 
