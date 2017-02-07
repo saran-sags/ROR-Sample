@@ -7,7 +7,6 @@
 
 # Description of purpose of file: 
 
-#Revision Date : 20-03-2013
 #*********************************************************************************
 
 class SessionsController < ApplicationController
