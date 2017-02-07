@@ -7,7 +7,6 @@
 
 # Description of purpose of file:  to validate admin details 
 
-# Revision Date : 20-03-2013
 #*********************************************************************************
 
 class User < ActiveRecord::Base
