@@ -7,7 +7,6 @@
 
 # Description of purpose of file: validates card details with sender and receiver details 
 
-#Revision Date : 20-03-2013
 #*********************************************************************************
 
 class CardDetail < ActiveRecord::Base
